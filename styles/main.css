@@ -1,21 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+
+:root {
+    --vertical-space: 2rem;
+    --horizontal-space: 3rem;
+    --light-pink-color: #F7D4C8;
+    --dark-orange-color: #FFAB6E;
+    --light-white-color: #FDFAF3;
+
+}
+
+a {
+    color: black;
+    text-decoration-color: var(--dark-orange-color);
+}
+
+a:hover {
+    text-decoration-color: #8D86A6;
+}
+
+header,
+footer {
+    padding-top: var(--vertical-space);
+    padding-bottom: var(--vertical-space);
+}
+
+header h1,
+footer h1 {
+    margin: 0;
+
+}
+
+header h1 {
+    text-decoration-color: var(--dark-orange-color);
+
+}
+
+main {
+    background-color: var(--light-white-color);
+}
+
+
 body {
-    padding-left: 4em;
-    font-size: 18px;
-    line-height: 1.5;
+    background-image: url("https://www.transparenttextures.com/patterns/axiom-pattern.png");
+    color: black;
+    background-color: var(--light-white-color);
+    display: grid;
+    grid-template-areas: "head head"
+        "nav nav"
+        "main main"
+        "foot foot";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto 1fr auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body#about img {
     height: 15em;
 }
 
-header,
-footer {
-    padding-top: 1.33rem 0;
-    padding-bottom: 1.33rem 0;
+body>* {
+    padding-left: var(--horizontal-space);
+    padding-right: var(--horizontal-space);
 }
 
-body>* {
-    padding-left: 4rem;
+body {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 body>nav ul {
@@ -23,48 +74,7 @@ body>nav ul {
     padding: 0;
 }
 
-body>nav ul li {
-    display: inline;
-    padding-right: 1rem;
-}
 
-header h1,
-footer h1 {
-    margin: 0;
-}
-
-h1,
-h2,
-h3 {
-    line-height: 1.2;
-}
-
-body#portfolio img {
-    height: 25em;
-}
-
-p {
-    max-width: 50em;
-}
-
-body {
-    display: grid;
-    grid-template-areas: "head nav"
-        "main main"
-        "foot foot";
-    grid-template-columns: 1fr 4fr;
-    grid-template-rows: auto 1fr auto;
-}
-
-@media screen and (min-width:25em) {
-    body {
-        display: grid;
-        grid-template-areas: "head nav"
-            "main main"
-            "foot foot";
-        grid-template-rows: auto 1fr auto;
-    }
-}
 
 body>header {
     grid-area: head;
@@ -84,4 +94,45 @@ body>nav {
 body>footer {
     grid-area: foot;
     /* background-color: green; */
+}
+
+body#portfolio ul#PortfolioItems {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+}
+
+@media screen and (min-width: 25em) {
+    body#portfolio ul#PortfolioItems li {
+        flex-basis: 48%;
+        padding-right: 2%;
+    }
+}
+
+body#portfolio ul#PortfolioItems li img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Lexend', sans-serif;
+    line-height: 1.2;
+}
+
+p {
+    max-width: 50em;
+    background-image: none;
+}
+
+
+@media screen and (min-width:25em) {
+    body {
+        grid-template-areas: "head head"
+            "nav main"
+            "foot foot";
+        grid-template-rows: auto 1fr auto;
+    }
 }
