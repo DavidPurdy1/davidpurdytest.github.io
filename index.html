@@ -7,7 +7,7 @@
 
     <link rel="stylesheet" href="styles/normalize.css"/>
     <link rel="stylesheet" href="styles/main.css"/>
-    <link rel="icon" href="images/favicon.png"/>
+    <link rel="icon" href="images/favicon.ico"/>
 </head>
 
 <body id="about">
@@ -24,27 +24,34 @@
     </nav>
     <main>
     <h1>About</h1>
-    <img src="images/avatar.png"/> 
+    <img id="meImage" ALIGN="left" src="images/me.jpg"/> 
+
 
     <p>
         Hi, I am David Purdy. A sophomore Computer Science student minoring in Math at Rose-Hulman Institute of Technology with a strong 
         background in topics such as Data structures and Algorithms, Object Oriented Programming, Database Design and Management, 
         and lowlevel programming. My coursework is strongly reinforced by Math and one of my main hobbies is problem solving.
-        Last summer I worked at InfoDynamics Inc where I worked on a Document Management software and created an automated testing library 
+        Last summer I worked at InfoDynamics Inc. where I worked on a Document Management software and created an automated testing library 
         for their software that can find bugs that happen relatively often to repeatedly tests software before rolling it out.    
     </p>
     <p>
         At InfoDynamics, I worked on a sprint team where I would have to collaborate with others to achieve goals for the week and 
         afterwards would have to present infront of the sprint team. These skills have helped me learn the dynamic at which a team like 
         this works and overall has benefitted my collaboration skills. When not doing schoolwork, I am also Vice President and Activities 
-        Director for Delta Sigma Phi and part of the volleyball team. I also enjoy music and am very interested in Synthesizers/keyboards!  
+        Director for Delta Sigma Phi and part of the volleyball team. I also enjoy music and am very interested in synthesizers/keyboards/instruments! 
+        (P.S. Speaking of synthesizers click down below for a suprise!) 
     </p>
-
+    <button id="pianoButton">Click Me!</button>
+    <div id="keyboard" class="keyboard-holder"></div>
     
     </main>
     <footer>
-        You can email me at purdydj@Rose-Hulman.edu
+        Contact me through <a href="mailto:Purdydj@Rose-Hulman.edu">Email</a>!
     </footer>
     <script src="scripts/main.js"></script>
+    <script src="scripts/audiosynth.js"></script>
+    <script src="scripts/playKeyboard.js"></script>
+
+    <!-- <script type="text/javascript">playKeyboard()</script> -->
 </body>
 </html>

@@ -1,0 +1,5 @@
+Spacing
+    -Need to fix some of the spacing of the project
+    -(about tab image empty and feels a little plain)
+    -Homepage text a little weird
+
